@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
 	public float speed = .325f;
-	public enum ControlledBy {noen, keyboard, mouse};
+	public enum ControlledBy {none, keyboard, mouse};
 	public ControlledBy controlledBy = ControlledBy.mouse;
 	Vector2 clicked;
 
@@ -56,7 +56,7 @@ public class PlayerControl : MonoBehaviour {
 		Vector3 p0 = (Vector3)rb.position, p1=(Vector3)(rb.position + rb.velocity);
 		p0.z = p1.z = -2;
 		//forcing 2d math into 3d math so that lines can draw correctly
-		Lines.MakeArrow (ref dirLine, p0, p1 , 2, Color.red);// making an arrow that keeps track of the direction that the player is moving in
+		Lines.MakeArrow (ref dirLine, p0, p1 , 2, Color.red,0.05f,0.05f);// making an arrow that keeps track of the direction that the player is moving in
 	}
 
 }
