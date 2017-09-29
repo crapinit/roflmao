@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 576092965}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -852,8 +852,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 4
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -2668,6 +2668,14 @@ Prefab:
       propertyPath: m_Name
       value: minion
       objectReference: {fileID: 0}
+    - target: {fileID: 4289675838327334, guid: 2b58d284f9db8a94f92c70f90d22f796, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 13.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289675838327334, guid: 2b58d284f9db8a94f92c70f90d22f796, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 13.49
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114503017624157220, guid: 2b58d284f9db8a94f92c70f90d22f796, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2b58d284f9db8a94f92c70f90d22f796, type: 2}
@@ -3089,7 +3097,7 @@ Prefab:
     - target: {fileID: 114503017624157220, guid: 2b58d284f9db8a94f92c70f90d22f796,
         type: 2}
       propertyPath: controlledBy
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b58d284f9db8a94f92c70f90d22f796, type: 2}
