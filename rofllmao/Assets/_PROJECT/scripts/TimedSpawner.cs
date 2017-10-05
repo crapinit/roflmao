@@ -22,7 +22,7 @@ public class TimedSpawner : MonoBehaviour {
 			Vector3 p = transform.position;
 			p += Random.onUnitSphere;
 			p.z = 0;
-			GameObject obj = Instantiate (thingToCreate, p, transform.rotation,ai);
+			GameObject obj = Instantiate (thingToCreate, p, transform.rotation);
 
 
 			things.Add (obj);
@@ -39,7 +39,7 @@ public class TimedSpawner : MonoBehaviour {
 			p1 = GameObject.Find ("player");
 			var thing = GameObject.Find ("minion(Clone)");
 			thing.GetComponent<AILerp> ().target = p1.transform; 
-			for(int  i =0; i< things.Count;
+
 		}
 	}
 }
