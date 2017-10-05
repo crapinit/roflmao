@@ -23,7 +23,12 @@ public class TimedSpawner : MonoBehaviour {
 			p += Random.onUnitSphere;
 			p.z = 0;
 			GameObject obj = Instantiate (thingToCreate, p, transform.rotation);
-
+			//p1 = GameObject.Find ("player");
+			AILerp ailerp = obj.GetComponent<AILerp> ();
+			if (ailerp != null) {
+				ailerp.target = p1.transform;
+				
+			}
 
 			things.Add (obj);
 		}
@@ -36,9 +41,9 @@ public class TimedSpawner : MonoBehaviour {
 			timer -= timeDuration;
 			Debug.Log ("The timer went off at " + Time.time);
 			Create (amountOf);
-			p1 = GameObject.Find ("player");
-			var thing = GameObject.Find ("minion(Clone)");
-			thing.GetComponent<AILerp> ().target = p1.transform; 
+
+			//var thing = GameObject.Find ("minion(Clone)");
+			//thing.GetComponent<AILerp> ().target = p1.transform; 
 
 		}
 	}

@@ -19,14 +19,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4359093016212366}
-  - component: {fileID: 114289599273753942}
+  - component: {fileID: 114394557092311614}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4359093016212366
 Transform:
   m_ObjectHideFlags: 1
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114289599273753942
+--- !u!114 &114394557092311614
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,9 +48,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1772033430611912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e4ff147e5c190448af0e53798b2ba00, type: 3}
+  m_Script: {fileID: 11500000, guid: 3293bf18532e6c84a97c36df87f804be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thingToCreate: {fileID: 1061196350712164, guid: e3e4a0a24354c5b47a5475b578f9e731,
+  timeDuration: 5
+  thingToCreate: {fileID: 1448142341288332, guid: bf57dceeb7b69f54eb3250ee19d9e6f8,
     type: 2}
   things: []
+  timer: 0
+  amountOf: 6
