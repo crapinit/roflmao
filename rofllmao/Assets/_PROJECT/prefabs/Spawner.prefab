@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772033430611912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -71.7, y: -63.3, z: 0}
   m_LocalScale: {x: 3.29, y: 3.49, z: 2.03}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,8 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDuration: 5
-  thingToCreate: {fileID: 1448142341288332, guid: bf57dceeb7b69f54eb3250ee19d9e6f8,
+  thingToCreate: {fileID: 1259984797331766, guid: 3d60905f3d619064c8856ab5e2d5a604,
     type: 2}
   things: []
   timer: 0
   amountOf: 6
+  p1: {fileID: 0}
+  enemyMinion: {fileID: 1511059546241050, guid: 80287549f710c2c4f87a5bd237fb3dff,
+    type: 2}
