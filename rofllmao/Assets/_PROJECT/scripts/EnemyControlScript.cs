@@ -6,8 +6,8 @@ public class EnemyControlScript : MonoBehaviour {
 	public float speed = .325f;
 	public LayerMask whatIsWall;
 	public float maxDistFromWall = 0f;
-	public float laneEndX = 40;
-	public float laneEndY = 40;
+
+	public Vector2 targetLocation = new Vector2 (40, 40);
 	Vector2 dir = Vector2.zero;
 
 
@@ -21,13 +21,10 @@ public class EnemyControlScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
-		float xPos = transform.position.x;
-		float yPos = transform.position.y;
-		Vector2 newPosition = new Vector2 (laneEndX, laneEndY);
+			
+		Vector2 newPosition = new Vector2 (targetLocation.x,targetLocation.y);
 
-		Vector2 oldPosition = new Vector2 (xPos, yPos);
-
+		Vector2 oldPosition = transform.position;
 		dir = newPosition - oldPosition;
 
 

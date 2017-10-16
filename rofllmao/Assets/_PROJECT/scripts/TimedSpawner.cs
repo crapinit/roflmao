@@ -35,10 +35,7 @@ public class TimedSpawner : MonoBehaviour {
 
 
 			things.Add (obj);
-			if (obj.transform == p1.transform) {
-				ailerp.target == p2.transform;
-			}
-		
+
 
 		}
 	}
