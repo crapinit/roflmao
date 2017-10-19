@@ -1511,6 +1511,16 @@ Prefab:
       propertyPath: p1
       value: 
       objectReference: {fileID: 313672828}
+    - target: {fileID: 114394557092311614, guid: 0c8572ad3eec4414d865ba65d8a8e695,
+        type: 2}
+      propertyPath: amountOf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114394557092311614, guid: 0c8572ad3eec4414d865ba65d8a8e695,
+        type: 2}
+      propertyPath: timeDuration
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c8572ad3eec4414d865ba65d8a8e695, type: 2}
   m_IsPrefabParent: 0
