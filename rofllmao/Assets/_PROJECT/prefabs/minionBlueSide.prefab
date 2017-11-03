@@ -144,7 +144,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   maxDistFromWall: 0
-  targetLocation: {x: -45, y: -18}
+  waypoints:
+  - {x: -74.9, y: 46.2}
+  - {x: -63.6, y: 58.8}
+  myPathIndex: 0
+  waypoint: {x: 0, y: 0}
+  waypointIndex: 0
 --- !u!212 &212522601502516260
 SpriteRenderer:
   m_ObjectHideFlags: 1

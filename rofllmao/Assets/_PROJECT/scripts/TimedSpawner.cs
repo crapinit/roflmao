@@ -46,7 +46,12 @@ public class TimedSpawner : MonoBehaviour {
 		if (timer >= timeDuration) {
 			timer -= timeDuration;
 			Debug.Log ("The timer went off at " + Time.time);
-			Create (amountOf);
+
+				Create (amountOf);
+				
+
+
+
 
 
 

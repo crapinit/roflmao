@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 50686957998531502}
   - component: {fileID: 114387066213508560}
   - component: {fileID: 114963894636741980}
-  - component: {fileID: 114390532507796422}
   m_Layer: 0
   m_Name: minionRedSide
   m_TagString: Untagged
@@ -52,7 +51,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511059546241050}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -64,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!58 &58445295932005464
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -86,39 +85,22 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511059546241050}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35e9e35416dd6b84d8bdfedbc4f6ecb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.325
+  speed: 3
   whatIsWall:
     serializedVersion: 2
     m_Bits: 256
   maxDistFromWall: 0
-  laneEndX: -73
-  laneEndY: 15
---- !u!114 &114390532507796422
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1511059546241050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 847a14d4dc9cc43679ab34fc78e0182f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repathRate: 0.5
-  target: {fileID: 0}
-  canSearch: 1
-  canMove: 1
-  speed: 3
-  enableRotation: 0
-  rotationIn2D: 1
-  rotationSpeed: 10
-  interpolatePathSwitches: 1
-  switchPathInterpolationSpeed: 5
+  waypoints:
+  - {x: 74, y: -24}
+  - {x: 63, y: -40}
+  myPathIndex: 0
+  waypoint: {x: 0, y: 0}
+  waypointIndex: 0
 --- !u!114 &114963894636741980
 MonoBehaviour:
   m_ObjectHideFlags: 1

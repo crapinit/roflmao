@@ -6,8 +6,8 @@ public class EnemyControlScript : MonoBehaviour {
 	public float speed = .325f;
 	public LayerMask whatIsWall;
 	public float maxDistFromWall = 0f;
+	public Vector2[] waypoints;
 
-	public Vector2 targetLocation = new Vector2 (40, 40);
 	Vector2 dir = Vector2.zero;
 	GameObject destinationLine;
 	GameObject pathLine;
@@ -17,14 +17,19 @@ public class EnemyControlScript : MonoBehaviour {
 	Pathfinding.Path myPath;
 	public int myPathIndex = 0;
 	Rigidbody2D rb;
+	public Vector2 waypoint;
+	public int waypointIndex;
 
 
 	// Use this for initialization
 	void Start () {
+		
+		waypoint = waypoints[0];
+
 		rb = GetComponent<Rigidbody2D> ();
 		seekr = GetComponent<Seeker> ();
 		seekr.pathCallback = HandleOnPathDelegate;
-		setTarget (targetLocation);
+		setTarget (waypoint);
 	}
 
 	void HandleOnPathDelegate (Pathfinding.Path p)
@@ -51,11 +56,12 @@ public class EnemyControlScript : MonoBehaviour {
 	}
 
 	public void setTarget(Vector3 location){
-		targetLocation = location;
+		waypoint = location;
 		myPathIndex = 0;
+		myPath = null;
 		if (seekr) {
 			seekr.CancelCurrentPathRequest ();
-			seekr.StartPath (transform.position, (Vector3)targetLocation);
+			seekr.StartPath (transform.position, (Vector3)waypoint);
 		}
 	
 	}
@@ -65,19 +71,19 @@ public class EnemyControlScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		Vector2 newPosition;
-		if (myPath != null) {
-			
+		if (myPath != null) 
+		{
 			if (myPathIndex >= myPath.vectorPath.Count) {
-				newPosition = new Vector2 (transform.position.x, transform.position.y);
+				newPosition = (Vector2) transform.position;
 			} else {
 				newPosition = (Vector2)(myPath.vectorPath [myPathIndex]);
 			}
 		} else {
-			newPosition = new Vector2 (transform.position.x, transform.position.y);
+			newPosition = (Vector2) transform.position;
+
 		}
 
-
-		Vector2 oldPosition = new Vector2 (transform.position.x,transform.position.y);
+		Vector2 oldPosition = (Vector2)transform.position;
 		dir = newPosition - oldPosition;
 			
 		Lines.Make (ref destinationLine, gameObject.transform.position, (Vector3)newPosition, Color.blue);
@@ -95,9 +101,27 @@ public class EnemyControlScript : MonoBehaviour {
 		rb.velocity = dir * speed;
 		if (Vector3.Distance(transform.position,newPosition) < 1 ) {
 			myPathIndex++;
+			if(myPath != null){
+				if (myPathIndex > myPath.vectorPath.Count) {
+				
+					if (waypointIndex + 1 > waypoints.Length) {
+						return;
+					} else {
+						waypointIndex++;
+						waypoint = waypoints [waypointIndex];
+						setTarget (waypoint);
+
+				
+					}
+				}
+
+			}
+
+
 		}
 		Lines.MakeCircle (ref targetCircleLine, (Vector3)newPosition, Vector3.forward, Color.red);	
 		collisionNormal = Vector2.zero;	
+
 
 	}
 	Vector2 collisionNormal;

@@ -600,34 +600,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &313672828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 313672829}
-  m_Layer: 0
-  m_Name: topLaneMinionGoal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &313672829
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 313672828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.9, y: 46.2, z: -30.294922}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419070129 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1554135163900310, guid: f6e0d41740e8b01479d3de4ddec64963,
@@ -923,7 +895,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4359093016212366, guid: 0c8572ad3eec4414d865ba65d8a8e695, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1772033430611912, guid: 0c8572ad3eec4414d865ba65d8a8e695, type: 2}
       propertyPath: m_Name
@@ -945,7 +917,7 @@ Prefab:
         type: 2}
       propertyPath: p1
       value: 
-      objectReference: {fileID: 1535705314}
+      objectReference: {fileID: 0}
     - target: {fileID: 1772033430611912, guid: 0c8572ad3eec4414d865ba65d8a8e695, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -1510,7 +1482,7 @@ Prefab:
         type: 2}
       propertyPath: p1
       value: 
-      objectReference: {fileID: 313672828}
+      objectReference: {fileID: 0}
     - target: {fileID: 114394557092311614, guid: 0c8572ad3eec4414d865ba65d8a8e695,
         type: 2}
       propertyPath: amountOf
@@ -1519,7 +1491,11 @@ Prefab:
     - target: {fileID: 114394557092311614, guid: 0c8572ad3eec4414d865ba65d8a8e695,
         type: 2}
       propertyPath: timeDuration
-      value: 3
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1772033430611912, guid: 0c8572ad3eec4414d865ba65d8a8e695, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c8572ad3eec4414d865ba65d8a8e695, type: 2}
@@ -4103,34 +4079,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1535705314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1535705315}
-  m_Layer: 0
-  m_Name: topLaneMinionGoal(red)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1535705315
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1535705314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.7, y: 73.8, z: -30.294922}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1672176089 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1429192953711330, guid: f6e0d41740e8b01479d3de4ddec64963,
@@ -4915,7 +4863,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4165386969370204, guid: c15820124e5a0bb4aa81328562698b87, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c15820124e5a0bb4aa81328562698b87, type: 2}
